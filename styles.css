@@ -1,0 +1,129 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; /* Remove default margin */
+  background-image: url('gym.jpg'); /* Add background image */
+  background-size: cover; /* Ensure the image covers the whole body */
+  background-position: center; /* Center the image */
+}
+
+/* Main App Container */
+#app {
+  background: rgba(255, 255, 255, 0.701); /* Make the background slightly transparent */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Input Field Styles */
+input {
+  width: 94%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #5cb85c; /* Green */
+}
+
+.google-button {
+  background-color: #db4437; /* Red */
+}
+
+.create-button {
+  background-color: #007bff; /* Blue */
+}
+
+.diet-plans-button {
+  background-color: #f0ad4e; /* Orange */
+}
+
+.load-receipts-button {
+  background-color: #5bc0de; /* Light Blue */
+}
+
+.logout-button {
+  background-color: #d9534f; /* Dark Red */
+}
+
+/* Button Hover Effects */
+.login-button:hover {
+  background-color: #4cae4c;
+}
+
+.google-button:hover {
+  background-color: #c13d30;
+}
+
+.create-button:hover {
+  background-color: #0056b3;
+}
+
+.diet-plans-button:hover {
+  background-color: #ec971f;
+}
+
+.load-receipts-button:hover {
+  background-color: #31b0d5;
+}
+
+.logout-button:hover {
+  background-color: #c9302c;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #4cae4c;
+}
+
+/* Logged-In View Styles */
+#logged-in-view {
+  background-color: white; /* Ensure background contrast */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+#diet-plans-view {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#diet-plan-text {
+  font-size: 16px;
+  color: #333;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Logged-Out View Wrapper -->
+    <div class="logged-out-view">
+      <!-- Login Form -->
+      <div id="login-form">
+        <h1>GYM MANAGER</h1>
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Password">
+        <button id="login-btn" class="login-button">Login</button>
+        <button id="google-login-btn" class="google-button">Sign in with Google</button>
+        <button id="create-user-btn" class="create-button">Create User</button>
+      </div>
+
+      <!-- Create User Form -->
+      <div id="create-user-form" style="display:none;">
+        <h2>Create User</h2>
+        <input type="email" id="create-email" placeholder="Email">
+        <input type="password" id="create-password" placeholder="Password">
+        <button id="create-btn" class="create-button">Create User</button>
+        <button id="google-create-btn" class="google-button">Sign up with Google</button>
+      </div>
+    </div>
+
+    <!-- Admin Login Form
+    <div id="admin-login-form" style="display:none;">
+      <h2>Admin Login</h2>
+      <input type="email" id="admin-login-email" placeholder="Admin Email">
+      <input type="password" id="admin-login-password" placeholder="Password">
+      <button id="admin-login-btn" class="login-button">Login as Admin</button>
+    </div> -->
+
+    <!-- Admin Dashboard -->
+    <div id="admin-view" style="display:none;">
+      <h2>Admin Dashboard</h2>
+      <button id="add-member-btn" class="add-member-button">Add Member</button>
+      <button id="view-members-btn" class="view-members-button">View Members</button>
+      <button id="admin-logout-btn" class="logout-button">Logout</button>
+
+      <!-- Add Member Form -->
+      <div id="add-member-form" style="display:none;">
+        <h3>Add Member</h3>
+        <input type="text" id="member-name" placeholder="Member Name">
+        <input type="email" id="member-email" placeholder="Member Email">
+        <button id="add-member-submit-btn" class="add-button">Add Member</button>
+        <button id="update-member-btn" class="update-button" style="display:none;">Update Member</button>
+      </div>
+
+      <!-- Members List -->
+      <div id="member-management-view" style="display:none;">
+        <h3>Members List</h3>
+        <ul id="member-list"></ul>
+      </div>
+    </div>
+
+    <!-- Logged In View -->
+    <div id="logged-in-view" style="display:none;">
+      <h2>Welcome to Gym Management</h2>
+      <button id="diet-plans-btn" class="diet-plans-button">Diet Plans</button>
+      <button id="logout-btn" class="logout-button">Logout</button>
+    </div>
+
+    <!-- Diet Plans View -->
+    <div id="diet-plans-view" style="display:none;">
+      <h2>Diet Plans</h2>
+      <label for="bmi-category">Select your Body Mass Index (BMI) category:</label>
+      <select id="bmi-category">
+        <option value="lean">Lean</option>
+        <option value="normal">Normal</option>
+        <option value="obese">Obese</option>
+      </select>
+      <button id="submit-bmi-btn">Submit</button>
+      <button id="back-to-menu-btn" class="logout-button">Back to Menu</button>
+      <div id="diet-plan-text" style="margin-top: 20px;"></div>
+    </div>
+  </div>
+
+  <!-- Make sure to specify type="module" here -->
+  <script src="app.js" type="module"></script>
+</body>
+</html>
